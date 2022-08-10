@@ -5,9 +5,44 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
-
+hr {
+  border-top: 1px solid purple;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+#progressBox {
+   display: none;
+   transition: 0.45s;
+}
+input {
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  background: transparent;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  border-bottom: 1px rgba(255, 255, 255, 0.384) solid;
+  outline: none;
+  color: #fff;
+  font-weight: 300;
+  font-size: 1.3em;
+}
+html {
+  
+}
+.header {
+  color: rgb(0, 0, 0);
+  padding: 15px;
+  margin-left:0.25rem;
+  font-weight: 400;
+  font-size: 25px;
+}
+.inform {
+  color: white;
+  font-weight: 400;
+  font-size: 18px;
 }
