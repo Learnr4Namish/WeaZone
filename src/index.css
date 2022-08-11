@@ -5,7 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
+
+  height:100%;
 }
 hr {
   border-top: 1px solid purple;
@@ -32,7 +33,7 @@ input {
   font-size: 1.3em;
 }
 html {
-  
+  height:100%;
 }
 .header {
   color: rgb(0, 0, 0);
@@ -40,6 +41,7 @@ html {
   margin-left:0.25rem;
   font-weight: 400;
   font-size: 25px;
+  display: flex;
 }
 .inform {
   color: white;
