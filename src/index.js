@@ -84,7 +84,7 @@ function showMainPage() {
       <br></br>
       <hr></hr>
       <br></br>
-      <p className='text-xl ml-4'>Developed, designed and created by <b>Namish Kumar</b>, a student of Class 8 of the country India.</p>
+      <p className='text-xl ml-4'>Developed, designed and created by <b>Namish Kumar</b>, a student of Class 10 of the country India.</p>
       </div>
       </div>
         </React.StrictMode>
@@ -117,10 +117,10 @@ function writeWeather(result, cityName) {
   
   fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`, requestOptions)
   .then(response => response.json())
-  .then(result => showWeather(result))
+  .then(result => showWeather(result, cityName))
   .catch(error => alert(error));
 }
-function showWeather(result) {
+function showWeather(result, ctn) {
   console.log(result);
    const cityName = result["name"];
    const cityCountry = result["sys"]["country"];
@@ -402,7 +402,7 @@ function showWeather(result) {
     </div>
     <hr></hr>
     <form onSubmit={searchWeather}>
-    <CssTextField id="cityName" style={textStyle2} className='ml-6'label="Enter a city name" focusColor="purple" type="text" value={cityName + ", " + countryCodesWithNames[cityCountry]} required></CssTextField>
+    <CssTextField id="cityName" style={textStyle2} className='ml-6'label="Enter a city name" focusColor="purple" type="text" value={ctn + ", " + countryCodesWithNames[cityCountry]} required></CssTextField>
     </form>
     <p className='ml-6' style={{fontSize:"80px", fontWeight:"bold"}}>{Math.round(Number(currentTemp))}°C</p>
     <p className='text-xl ml-6'>Feels like {Math.round(Number(feelsLike))}°C</p>
